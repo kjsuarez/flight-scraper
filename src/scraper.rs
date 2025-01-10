@@ -37,12 +37,12 @@ impl ScrapedFlightData {
 
 #[derive( Debug)]
 pub struct Ticket {
-    purchase_date: String, 
-    flight_date: String,
-    days_in_advance: u32,
-    origin: String,
-    destination: String,
-    price: u32,
+    pub purchase_date: String, 
+    pub flight_date: String,
+    pub days_in_advance: u32,
+    pub origin: String,
+    pub destination: String,
+    pub price: u32,
 }
 
 #[derive( Debug)]
@@ -112,9 +112,9 @@ pub fn scrape( origin: &str, destination: &str) -> ScrapedFlightData {
     };
     while working {
         let query = Query::paginated(origin, destination, page);
-        println!("Query: {:?}", query);
+        // println!("Query: {:?}", query);
         let resp = get_raw_flight_data(query, &client);
-        println!("response: {resp:?}");
+        // println!("response: {resp:?}");
 
         let tickets = &mut ScrapedFlightData::tickets_from_post_resp(
             String::from("PHL"), 
@@ -123,7 +123,7 @@ pub fn scrape( origin: &str, destination: &str) -> ScrapedFlightData {
         );
 
         if tickets.len() < (Query::PAGE_LENGTH - 1) as usize {
-            println!("ticket count: {} vs page length: {}", tickets.len(), Query::PAGE_LENGTH - 1);
+            // println!("ticket count: {} vs page length: {}", tickets.len(), Query::PAGE_LENGTH - 1);
             working = false;
         }
 
