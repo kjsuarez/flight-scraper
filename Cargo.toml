@@ -1,0 +1,13 @@
+[package]
+name = "flight-ledger"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+serde = { version = "1.0.217",  features = ["derive"]  }
+regex = "1.11.1"
+rusqlite = { version = "0.32.1", features = ["bundled"] }
+chrono = "0.4.39"
