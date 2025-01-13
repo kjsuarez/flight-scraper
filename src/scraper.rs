@@ -36,6 +36,7 @@ impl ScrapedFlightData {
 }
 
 #[derive( Debug)]
+#[derive( Clone)]
 pub struct Ticket {
     pub purchase_date: String, 
     pub flight_date: String,
@@ -117,8 +118,8 @@ pub fn scrape( origin: &str, destination: &str) -> ScrapedFlightData {
         // println!("response: {resp:?}");
 
         let tickets = &mut ScrapedFlightData::tickets_from_post_resp(
-            String::from("PHL"), 
-            String::from("ORD"), 
+            String::from(origin), 
+            String::from(destination), 
             resp
         );
 
