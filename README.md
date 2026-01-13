@@ -12,3 +12,5 @@ Sometimes it's just more fun to roll your own.
 ### What happened?
 For each source/destination pair of the top 10 busiest airports in th US, the program scrapes goolge flights for the cheapest ticket price for the next 330 days and saves it to a sqlite database located in the root of the project.
 If run every day, the db will slowly reveal the optimal time of year to buy a flight, and the optimal time in advance a flight should be purchased.
+
+does this work
