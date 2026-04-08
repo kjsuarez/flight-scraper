@@ -1,7 +1,7 @@
 ## Why?
 I want flight pricing data and I don't want to pay for it. There are a zillion services that offer flight pricing APIs but they all cost money. Google dropped it's flights API in 2018 but you can still get the data if you're willing to get creative 😈
 
-### Ok, but flight pringing statistics are already pretty widely available?
+### Ok, but flight pricing statistics are already pretty widely available?
 Sometimes it's just more fun to roll your own.
 
 
